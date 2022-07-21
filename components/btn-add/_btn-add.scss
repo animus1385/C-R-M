@@ -1,0 +1,28 @@
+.panel__button-add-human {
+	display: flex;
+	margin: 0 auto;
+	padding: 13px 22px 13px 13px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+	color: #9873ff;
+	border: 2px solid #9873ff;
+	letter-spacing: 0.3px;
+	cursor: pointer;
+}
+.panel__button-add-human::before {
+	content: "";
+	width: 22px;
+	height: 16px;
+	background: url("../../img/addBtn.svg") no-repeat center;
+	padding-right: 21px;
+}
+.panel__button-add-human:hover {
+	background-color: #b89eff;
+	color: #ffffff;
+}
+.panel__button-add-human:active,
+.panel__button-add-human:focus {
+	background-color: #8052ff;
+	color: #ffffff;
+}

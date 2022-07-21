@@ -1,0 +1,221 @@
+.pop {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	&__bg {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background-color: #3333338c;
+	}
+	&__container {
+		z-index: 2;
+		width: 450px;
+		height: auto;
+		padding: 24px 0px;
+		position: relative;
+		background: #ffffff;
+		box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+	}
+	&__title {
+		font-size: 18px;
+		color: #333333;
+		font-weight: bold;
+		margin-bottom: 16px;
+		padding: 0 30px;
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+	&__label {
+		display: flex;
+		font-size: 10px;
+		color: #b0b0b0;
+		margin-bottom: 15px;
+		font-weight: normal;
+		flex-direction: column;
+		padding: 0 30px;
+	}
+	&__input {
+		border: none;
+		margin-bottom: 2px;
+		padding: 2px 0 4px;
+		border-bottom: 1px solid #c8c5d1;
+		&::placeholder {
+			font-size: 14px;
+			font-weight: 600;
+			color: #333333;
+		}
+	}
+	&__patronymic-label {
+		margin-bottom: 40px;
+	}
+	&__list-container {
+		display: flex;
+		padding: 8px 0;
+		margin-bottom: 25px;
+		align-items: center;
+		flex-direction: column;
+		background: #c8c5d17c;
+	}
+	&__add-btn {
+		cursor: pointer;
+		&::before {
+			content: "";
+			width: 13px;
+			height: 13px;
+			padding-right: 18px;
+			background: url("../../img/plus.svg") no-repeat center;
+		}
+	}
+	&__save-btn {
+		color: white;
+		font-size: 14px;
+		cursor: pointer;
+		font-weight: 600;
+		margin: 0 auto 5px;
+		padding: 12px 35px;
+		background: #9873ff;
+	}
+	&__delete-btn {
+		cursor: pointer;
+		font-size: 12px;
+		color: #333333;
+		font-weight: normal;
+		text-decoration-line: underline;
+	}
+	&__close-btn {
+		top: 2%;
+		right: 2%;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		cursor: pointer;
+		position: absolute;
+		align-items: center;
+		&::before,
+		&::after {
+			content: "";
+			width: 2px;
+			height: 100%;
+			background-color: #c8c5d1;
+		}
+		&::before {
+			transform: rotate(45deg) translate(3px, 2px);
+		}
+		&::after {
+			transform: rotate(135deg) translate(3px, -2px);
+		}
+	}
+	&__elem-contact {
+		display: flex;
+		margin: 17px 30px 8px;
+		width: 88%;
+	}
+	&__delete-btn-contact {
+		display: flex;
+		width: 12px;
+		padding: 12px 12px;
+		background: #e7e5eb;
+		cursor: pointer;
+		border: 1px solid #c8c5d1;
+		background: url("../../img/X.svg") no-repeat center;
+	}
+	&__input-contact {
+		display: flex;
+		flex-grow: 1;
+		font-weight: 600;
+		font-size: 14px;
+		padding: 8px 12px 9px;
+		border: 1px solid #e7e5eb;
+		&::placeholder {
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+	&__descr {
+		margin-bottom: 25px;
+	}
+	&__concent {
+		.pop__container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding: 27px 88px;
+			text-align: center;
+		}
+		.pop__save-btn {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.pop__input-contact .active-pop {
+	display: flex;
+}
+
+.select {
+	position: relative;
+	border: 1px solid #c8c5d1;
+	width: 123px;
+	.is-active &__body {
+		display: block;
+	}
+	&__header {
+		cursor: pointer;
+		display: flex;
+		background-color: #e7e5eb;
+	}
+	&__current {
+		font-size: 12px;
+		line-height: 16px;
+		padding: 10px;
+		background-color: #E7E5EB;
+	}
+	&__icon {
+		align-items: center;
+		display: flex;
+		flex-shrink: 0;
+		background: url("/img/arrow.svg") no-repeat center;
+		background-size: contain;
+		position: absolute;
+		right: 10px;
+		justify-content: center;
+		height: 100%;
+		margin-left: auto;
+		text-align: center;
+		width: 10px;
+		.is-active & {
+			transform: rotate(180deg);
+		}
+	}
+	&__body {
+		border: 1px solid #cccccc;
+		border-top: 0;
+		display: none;
+		left: 0;
+		background-color:  #F4F3F6;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 5;
+	}
+	&__item {
+		cursor: pointer;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 10px;
+		&:hover {
+			background-color: #E7E5EB;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+.panel__item {
+	display: grid;
+	grid-template-columns: 50px 1fr 135px 135px 150px 200px;
+	align-items: center;
+	padding: 20px;
+	background-color: white;
+	overflow: hidden;
+	border-bottom: 1px solid #c8c5d186;
+	
+	& > * {
+		font-size: 14px;
+	}
+	&-id {
+		font-size: 12px;
+	}
+	&-date {
+		display: flex;
+	}
+	&-current-date {
+		display: flex;
+	}
+	&-group-button {
+		display: flex;
+	}
+}
+.contacts {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 17px;
+	overflow: hidden;
+	gap: 7px;
+	&-open {
+		overflow: inherit;
+		height: auto;
+	}
+	&__item {
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
+		border-radius: 40px;
+		background-color: black;
+		transition: background-color 0.4s ease;
+		&:hover {
+			background-color: #9873ff;
+			color: white;
+		}
+		&--vk {
+			background: url("../../img/vk.svg") no-repeat center;
+		}
+		&--tel {
+			background: url("../../img/phone.svg") no-repeat center;
+		}
+		&--email {
+			background: url("../../img/mail.svg") no-repeat center;
+		}
+		&--facebook {
+			background: url("../../img/fb.svg") no-repeat center;
+		}
+		&--extraTel {
+			background: url("../../img/connection.svg") no-repeat center;
+		}
+	}
+	&__btn-more {
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+		font-size: 8px;
+		line-height: 11px;
+		font-weight: 600;
+		border: 1px solid #9873ff;
+	}
+	
+}
+
+
+.btn-actions {
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	&__item {
+		display: flex;
+		cursor: pointer;
+	}
+	&__modify::before,
+	&__delete::before {
+		content: "";
+		width: 12px;
+		height: 100%;
+		padding-left: 5px;
+	}
+	&__modify::before {
+		background: url("../../img/eddit.svg") no-repeat center;
+	}
+	&__delete::before {
+		background: url("../../img/X\ red.svg") no-repeat center;
+	}
+}
+.tooltip {
+	display: none;
+	background: #333;
+	font-weight: bold;
+	padding: 4px 8px;
+	font-size: 13px;
+	color: white;
+	border-radius: 4px;
+	&__textToltip {
+		color: pink;
+		text-decoration: solid;
+	}
+	&[data-show] {
+		display: block;
+	} 
+	&__arrow,
+	&__arrow::before {
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		background: inherit;
+	}
+	&__arrow {
+		visibility: hidden;
+		&::before {
+			visibility: visible;
+			content: "";
+			transform: rotate(45deg);
+		}
+	}
+	&[data-popper-placement^="top"] > &__arrow {
+		bottom: -4px;
+	}
+	&[data-popper-placement^="bottom"] > &__arrow {
+		top: -4px;
+	}
+	
+	&[data-popper-placement^="left"] > &__arrow {
+		right: -4px;
+	}
+	
+	&[data-popper-placement^="right"] > &__arrow {
+		left: -4px;
+	}
+}
+
